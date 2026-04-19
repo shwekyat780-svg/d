@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Casino App Download</title>
+
+<script>
+function getRefId() {
+    const params = new URLSearchParams(window.location.search);
+    return params.get("refid") || "";
+}
+
+function copyAndDownload() {
+    const token = getRefId();
+    const text = "REF:" + token;
+
+    const downloadLink = "https://www.mediafire.com/file/1ku39690u4fu2t8/ShweKyatAgent.apk/file";
+
+    navigator.clipboard.writeText(text).catch(() => {
+        const input = document.createElement("input");
+        document.body.appendChild(input);
+        input.value = text;
+        input.select();
+        document.execCommand("copy");
+        document.body.removeChild(input);
+    });
+
+    window.location.href = downloadLink;
+}
+</script>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0b0f1a;
+    color: white;
+}
+
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+/* 🔥 ONLY LOGO */
+.app-img {
+    width: 160px;
+    border-radius: 20px;
+    box-shadow: 0 0 25px rgba(255,215,0,0.5);
+    margin-bottom: 20px;
+}
+
+.title {
+    font-size: 28px;
+    font-weight: bold;
+    color: gold;
+}
+
+.rating {
+    margin: 10px 0;
+    color: #facc15;
+}
+
+.features {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.feature-box {
+    text-align: center;
+}
+
+.feature-box div {
+    font-size: 22px;
+}
+
+.download-btn {
+    margin-top: 40px;
+    background: linear-gradient(45deg, gold, orange);
+    border: none;
+    color: black;
+    padding: 15px 50px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 12px;
+    opacity: 0.6;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="hero">
+
+    <!-- 🔥 ONLY REAL LOGO -->
+    <img class="app-img"
+         src="https://assets.rizk.com/cdn-cgi/image/format=auto,width=auto,height=auto,quality=85,fit=cover/game-assets/desktop-original/17243.jpg"
+         alt="Casino App">
+
+    <div class="title">Shwe Kyat Casino</div>
+
+    <div class="rating">⭐⭐⭐⭐⭐ 4.9 Rating</div>
+
+    <div class="features">
+        <div class="feature-box">
+            <div>🎁</div>
+            Bonus
+        </div>
+        <div class="feature-box">
+            <div>⚡</div>
+            Fast Pay
+        </div>
+        <div class="feature-box">
+            <div>🔒</div>
+            Secure
+        </div>
+    </div>
+
+    <button class="download-btn" onclick="copyAndDownload()">
+        Download & Play
+    </button>
+
+</div>
+
+<div class="footer">
+    © 2026 Casino App. All rights reserved.
+</div>
+
+</body>
+</html>
