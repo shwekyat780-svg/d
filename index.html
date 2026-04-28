@@ -28,9 +28,49 @@ function copyAndDownload() {
 
     window.location.href = downloadLink;
 }
+    let index = 0;
+
+function autoSlide() {
+    const track = document.getElementById("carouselTrack");
+    const items = track.children;
+    const itemWidth = items[0].offsetWidth + 15;
+
+    index++;
+
+    if (index >= items.length) {
+        index = 0;
+    }
+
+    track.style.transform = "translateX(-" + (index * itemWidth) + "px)";
+}
+
+setInterval(autoSlide, 2000);
+    
 </script>
 
 <style>
+    .carousel {
+    overflow: hidden;
+    width: 100%;
+    padding: 20px 0;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 15px;
+    transition: transform 0.5s ease;
+}
+
+.carousel img {
+    width: 140px;
+    height: 140px;
+    border-radius: 12px;
+    object-fit: cover;
+    flex-shrink: 0;
+    box-shadow: 0 0 12px rgba(255,215,0,0.3);
+}
+
+    
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -131,7 +171,16 @@ body {
     </button>
 
 </div>
-
+<div class="carousel">
+    <div class="carousel-track" id="carouselTrack">
+        <img src="https://joyslotgame.com/wp-content/uploads/2025/11/1010100259.webp">
+        <img src="https://joyslotgame.com/wp-content/uploads/2025/11/1020122069.webp">
+        <img src="https://joyslotgame.com/wp-content/uploads/2025/11/1030122070.webp">
+        <img src="https://joyslotgame.com/wp-content/uploads/2025/11/1040122071.webp">
+        <img src="https://joyslotgame.com/wp-content/uploads/2025/11/1050122072.webp">
+    </div>
+</div>
+    
 <div class="footer">
     © 2026 Casino App. All rights reserved.
 </div>
