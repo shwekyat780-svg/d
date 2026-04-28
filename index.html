@@ -33,16 +33,19 @@ function copyAndDownload() {
 </script>
 
 <style>
-    .carousel {
+   .carousel {
     overflow: hidden;
     width: 100%;
     padding: 20px 0;
+    display: flex;
+    justify-content: center; /* 🔥 center whole track */
 }
 
 .carousel-track {
     display: flex;
     gap: 15px;
     transition: transform 0.5s ease;
+    justify-content: center; /* 🔥 center items */
 }
 
 .carousel img {
